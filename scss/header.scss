@@ -1,0 +1,77 @@
+.header {
+    &-top {
+        border-bottom: 1px solid #E1E1E1;
+        &__inner {
+            padding: 13px 0;
+            @extend %flex-between;
+        }
+    }
+    &-bottom {
+        &__inner {
+            padding: 24px 0;
+            @extend %flex-between;
+        }
+    }
+    &__logo {
+        width: 153px;
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    &__address,
+    &__vision-impared {
+        @extend %flex;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        svg {
+            margin-right: 10px;
+        }
+    }
+    &__make-order {
+        font-weight: bold;
+        font-size: 14px;
+        color: $brown;
+    }
+    &__phone {
+        font-weight: bold;
+        font-size: 14px;
+        &:hover {
+            color: $brown;
+        }
+    }
+    &__service {
+        margin-right: 50px;
+        &-btn {
+            @extend %flex;
+            flex-shrink: 0;
+            cursor: pointer;
+            span {
+                font-weight: 500;
+                font-size: 15px;
+                margin: 0 12px;
+            }
+            i {
+                transition: all .3s;
+            }
+        }
+        &-btn--active {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.nav {
+    @extend %flex-between;
+    flex-grow: 1;
+    &__item {
+        font-weight: 500;
+        font-size: 15px;
+        &:hover {
+            color: $brown;
+        }
+    }
+}
