@@ -82,15 +82,15 @@ function expertSlider() {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
-                spaceBetween: 0,
+                slidesPerView: 2,
+                spaceBetween: 20,
 
             },
             480: {
-                slidesPerView: 2,
-                spaceBetween: 0
+                slidesPerView: 3,
+                spaceBetween: 20
             },
-            1200: {
+            992: {
                 slidesPerView: 3,
                 spaceBetween: 30
             }
@@ -116,12 +116,8 @@ function feedbackSlider() {
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: 0,
+                spaceBetween: 20,
 
-            },
-            480: {
-                slidesPerView: 2,
-                spaceBetween: 0
             },
             1200: {
                 slidesPerView: 2,
@@ -131,7 +127,7 @@ function feedbackSlider() {
     });
 }
 
-function feedbackSlider() {
+function ourFeedbackSlider() {
     var swiper = new Swiper('.our-feedback .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -180,13 +176,8 @@ function dmsSlider() {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-
-            },
-            480: {
                 slidesPerView: 'auto',
-                spaceBetween: 50,
+                spaceBetween: 20,
             },
             1200: {
                 slidesPerView: 'auto',
@@ -201,7 +192,26 @@ $(document).ready(function() {
     expertSlider()
     feedbackSlider()
     dmsSlider()
-    feedbackSlider()
+    ourFeedbackSlider()
+
+    $("input").change(function() {
+        let inputValue = $(this).val()
+        if (inputValue) {
+            $(this).addClass("input-filled")
+        } else {
+            $(this).removeClass("input-filled")
+        }
+    })
+
+    $("input").keydown(function() {
+        let inputValue = $(this).val()
+        if (inputValue) {
+            $(this).addClass("input-filled")
+        } else {
+            $(this).removeClass("input-filled")
+        }
+
+    })
 
 
     $(".header__service-btn").click(function() {
@@ -211,10 +221,19 @@ $(document).ready(function() {
     $(".price__item-show").click(function() {
         if ($(this).hasClass("price__item-show--active")) {
             $(this).removeClass("price__item-show--active")
+            $(this).siblings(".price__item-hidden").slideUp()
         } else {
             $(".price__item-show").removeClass("price__item-show--active")
             $(this).addClass("price__item-show--active")
+            $(".price__item-hidden").slideUp()
+            $(this).siblings(".price__item-hidden").slideDown()
         }
+    })
+
+    $(".header__burger").click(function() {
+        $(this).toggleClass("header__burger--active")
+        $(".header").toggleClass("header--active")
+            // $(".header__right").slideToggle()
     })
 
 })

@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$druk".
-        on line 10 of D:\work\freelance\korona\scss\ui.scss
+        on line 22 of D:\work\freelance\korona\scss\ui.scss
 
-5:     padding: 0;
-6:     border-radius: 0px;
-7: }
-8: 
-9: .text-druk {
-10:     font-family: $druk;
-11: }
-12: 
-13: .pagination {
-14:     display: flex;
-15:     align-items: center;
+17:         background: #A58668;
+18:     }
+19: }
+20: 
+21: .text-druk {
+22:     font-family: $druk;
+23: }
+24: 
+25: .pagination {
+26:     display: flex;
+27:     align-items: center;
 
 Backtrace:
-D:\work\freelance\korona\scss\ui.scss:10
+D:\work\freelance\korona\scss\ui.scss:22
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$druk\".\A         on line 10 of D:\work\freelance\korona\scss\ui.scss\A \A 5:     padding: 0;\A 6:     border-radius: 0px;\A 7: }\A 8: \A 9: .text-druk {\A 10:     font-family: $druk;\A 11: }\A 12: \A 13: .pagination {\A 14:     display: flex;\A 15:     align-items: center;"; }
+  content: "Error: Undefined variable: \"$druk\".\A         on line 22 of D:\work\freelance\korona\scss\ui.scss\A \A 17:         background: #A58668;\A 18:     }\A 19: }\A 20: \A 21: .text-druk {\A 22:     font-family: $druk;\A 23: }\A 24: \A 25: .pagination {\A 26:     display: flex;\A 27:     align-items: center;"; }

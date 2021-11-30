@@ -55,8 +55,9 @@
             text-transform: uppercase;
             color: #C39F7B;
             &:hover {
+                color: #A58668;
                 path {
-                    fill: $black;
+                    fill: #A58668;
                 }
             }
             svg {
@@ -85,6 +86,72 @@
             line-height: 150%;
             color: #C39F7B;
             margin-top: 45px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts {
+        &__top {
+            display: block;
+            margin-top: 0;
+        }
+        &__col {
+            margin-top: 40px;
+        }
+        &__middle {
+            display: block;
+            margin-top: 25px;
+            &-link {
+                margin-top: 10px;
+            }
+        }
+        &__bottom {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        padding: 40px 0;
+        &__middle {
+            display: none;
+        }
+        &__col {
+            &-title {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        &__mail,
+        &__fax,
+        &__address,
+        &__phone,
+        &__time {
+            font-size: 12px;
+            margin-bottom: 13px;
+            svg {
+                width: 16px;
+                margin-right: 10px;
+            }
+        }
+        &__bottom {
+            padding: 30px 25px;
+            display: block;
+            &-left {
+                width: 100%;
+            }
+            &-title {
+                font-size: 14px;
+            }
+            &-desc {
+                font-size: 12px;
+                margin: 20px 0 25px;
+            }
         }
     }
 }

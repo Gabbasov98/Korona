@@ -2,13 +2,13 @@
 @font-face {
     font-family: "Druk Text Wide Cyr";
     src: url(../fonts/DrukTextWideCyrMedium.otf);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: "Druk Text Wide Cyr";
     src: url(../fonts/DrukCyr-MediumItalic.ttf);
-    font-weight: 500;
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -143,7 +143,7 @@ i {
     padding: 0 10px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
     .container {
         width: 1200px;
     }
@@ -166,6 +166,7 @@ body {
     font-weight: normal;
     height: 100%;
     color: $black;
+    overflow-x: hidden;
     font-feature-settings: 'pnum' on, 'lnum' on;
     &.openmodal {
         overflow-y: hidden;
@@ -194,6 +195,18 @@ h2 {
     line-height: 150%;
 }
 
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    input {
+        font-size: 12px;
+    }
+}
+
 @import 'ui';
 @import 'header';
 @import 'index';
@@ -201,3 +214,5 @@ h2 {
 @import 'feedback';
 @import 'price';
 @import 'contacts';
+@import 'services';
+@import 'popups';
